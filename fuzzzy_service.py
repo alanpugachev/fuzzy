@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 # Range 0..1 with step 0.1
 universe = np.arange(0, 1, 0.01)
 
+# Membership functions was hardcoded
+
 # Test values (Hysteria)
 hysteria_low = fuzz.trapmf(universe, [-0.1, 0, 0.12, 0.23])
 hysteria_mid = fuzz.trapmf(universe, [0.12, 0.23, 0.35, 0.43])
@@ -84,9 +86,50 @@ plt.plot(universe, hypochondria_elevated, label = "hs_elevated", color = 'limegr
 plt.plot(universe, hypochondria_high, label = "hs_high", color = 'limegreen')
 plt.plot(universe, hypochondria_very_high, label = "hs_very_high", color = 'limegreen')
 
+plt.plot(universe, depression_low, label = "d_low", color = 'chocolate')
+plt.plot(universe, depression_mid, label = "d_mid", color = 'chocolate')
+plt.plot(universe, depression_elevated, label = "d_elevated", color = 'chocolate')
+plt.plot(universe, depression_high, label = "d_high", color = 'chocolate')
+plt.plot(universe, depression_very_high, label = "d_very_high", color = 'chocolate')
+
+plt.plot(universe, psychopathy_low, label = "pd_low", color = 'cornflowerblue')
+plt.plot(universe, psychopathy_mid, label = "pd_mid", color = 'cornflowerblue')
+plt.plot(universe, psychopathy_elevated, label = "pd_elevated", color = 'cornflowerblue')
+plt.plot(universe, psychopathy_high, label = "pd_high", color = 'cornflowerblue')
+plt.plot(universe, psychopathy_very_high, label = "pd_very_high", color = 'cornflowerblue')
+
+plt.plot(universe, paranoia_low, label = "pa_low", color = 'blueviolet')
+plt.plot(universe, paranoia_mid, label = "pa_mid", color = 'blueviolet')
+plt.plot(universe, paranoia_elevated, label = "pa_elevated", color = 'blueviolet')
+plt.plot(universe, paranoia_high, label = "pa_high", color = 'blueviolet')
+plt.plot(universe, paranoia_very_high, label = "pa_very_high", color = 'blueviolet')
+
+plt.plot(universe, psychasthenia_low, label = "pt_low", color = 'darkorange')
+plt.plot(universe, psychasthenia_mid, label = "pt_mid", color = 'darkorange')
+plt.plot(universe, psychasthenia_elevated, label = "pt_elevated", color = 'darkorange')
+plt.plot(universe, psychasthenia_high, label = "pt_high", color = 'darkorange')
+plt.plot(universe, psychasthenia_very_high, label = "pt_very_high", color = 'darkorange')
+
+plt.plot(universe, schizophrenia_low, label = "sc_low", color = 'firebrick')
+plt.plot(universe, schizophrenia_mid, label = "sc_mid", color = 'firebrick')
+plt.plot(universe, schizophrenia_elevated, label = "sc_elevated", color = 'firebrick')
+plt.plot(universe, schizophrenia_high, label = "sc_high", color = 'firebrick')
+plt.plot(universe, schizophrenia_very_high, label = "sc_very_high", color = 'firebrick')
+
+plt.plot(universe, hypomania_low, label = "ma_low", color = 'mediumslateblue')
+plt.plot(universe, hypomania_mid, label = "ma_mid", color = 'mediumslateblue')
+plt.plot(universe, hypomania_elevated, label = "ma_elevated", color = 'mediumslateblue')
+plt.plot(universe, hypomania_high, label = "ma_high", color = 'mediumslateblue')
+plt.plot(universe, hypomania_very_high, label = "ma_very_high", color = 'mediumslateblue')
+
+plt.plot(universe, introversion_low, label = "si_low", color = 'palevioletred')
+plt.plot(universe, introversion_mid, label = "si_mid", color = 'palevioletred')
+plt.plot(universe, introversion_elevated, label = "si_elevated", color = 'palevioletred')
+plt.plot(universe, introversion_high, label = "si_high", color = 'palevioletred')
+plt.plot(universe, introversion_very_high, label = "si_very_high", color = 'palevioletred')
+
 plt.title('Membership Functions')
 plt.ylabel('Degree of Membership')
 plt.xlabel('Universe of Discourse') 
-plt.legend(loc = 'upper right')
 plt.grid(True)
 plt.show()
