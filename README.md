@@ -1,0 +1,3 @@
+A service I wrote for my master's thesis. The service takes a list of values ​​(planned to be JSON, but I'll do whatever works) and uses that list to determine whether a person is behaving deviously.
+
+the description will be supplemented if I don't forget...
