@@ -28,4 +28,5 @@ dependencies {
     testImplementation(libs.kotlin.test.junit)
 
     implementation("io.ktor:ktor-server-html-builder:3.1.2")
+    implementation("io.ktor:ktor-server-resources:3.1.2")
 }
