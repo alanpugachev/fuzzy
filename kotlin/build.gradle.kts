@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.alanpugachev"
-version = "0.0.1"
+version = "0.1.1"
 
 application {
     mainClass = "io.ktor.server.netty.EngineMain"
@@ -26,4 +26,6 @@ dependencies {
     implementation(libs.ktor.server.config.yaml)
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
+
+    implementation("io.ktor:ktor-server-html-builder:3.1.2")
 }
