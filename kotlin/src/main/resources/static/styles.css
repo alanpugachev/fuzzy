@@ -180,6 +180,128 @@ ol li {
 }
 
 /* ====================== */
+/*     Survey Styles      */
+/* ====================== */
+
+.disclaimer-box {
+    background-color: var(--bg-accent);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.survey-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.survey-question {
+    background-color: var(--bg-tertiary);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.rating-scale {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.radio-option input[type="radio"]:checked {
+    background-color: var(--primary-color);
+    box-shadow: inset 0 0 0 3px var(--bg-tertiary);
+}
+
+.radio-option label {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.submit-button {
+    align-self: flex-end;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ====================== */
+/*     Survey Action      */
+/* ====================== */
+.survey-action {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.survey-button {
+    padding: 12px 36px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.survey-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.survey-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .survey-button {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+/* ====================== */
 /*   Special Components   */
 /* ====================== */
 .placeholder {

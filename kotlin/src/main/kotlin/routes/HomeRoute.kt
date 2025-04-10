@@ -1,7 +1,6 @@
 package com.alanpugachev.routes
 
 import io.ktor.server.html.*
-import io.ktor.server.http.content.*
 import io.ktor.server.routing.*
 import kotlinx.html.*
 
@@ -17,9 +16,15 @@ fun Route.homeRoute() {
                 div(classes = "container") {
                     div(classes = "content-wrapper") {
                         div(classes = "navbar") {
-                            a(href = "/") { button(classes = "nav-button") { +"Home" } }
-                            a(href = "/about") { button(classes = "nav-button") { +"About" } }
-                            a(href = "/results") { button(classes = "nav-button") { +"Results" } }
+                            a(href = "/") {
+                                button(classes = "nav-button") { +"Home" }
+                            }
+                            a(href = "/about") {
+                                button(classes = "nav-button") { +"About" }
+                            }
+                            a(href = "/results") {
+                                button(classes = "nav-button") { +"Results" }
+                            }
                         }
 
                         main(classes = "content-box") {
@@ -28,7 +33,7 @@ fun Route.homeRoute() {
                             div(classes = "highlight-box") {
                                 p {
                                     +"""A shortened 71-item version of the MMPI that maintains clinical validity 
-                                        while reducing administration time by 80% compared to the full 567-item test.""".trimMargin()
+                                    while reducing administration time by 80% compared to the full 567-item test.""".trimMargin()
                                 }
                             }
 
@@ -47,6 +52,14 @@ fun Route.homeRoute() {
                                 div(classes = "use-card") { +"Research studies" }
                                 div(classes = "use-card") { +"Brief personality assessment" }
                                 div(classes = "use-card") { +"Settings requiring rapid evaluation" }
+                            }
+
+                            div(classes = "survey-action") {
+                                a(href = "/survey") {
+                                    button(classes = "survey-button") {
+                                        +"Take Survey"
+                                    }
+                                }
                             }
 
                             p(classes = "disclaimer") {
