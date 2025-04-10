@@ -4,11 +4,13 @@ import com.alanpugachev.routes.homeRoute
 import io.ktor.server.application.*
 import io.ktor.server.http.content.*
 import io.ktor.server.routing.*
+import routes.aboutRoute
 
 fun Application.configureRouting() {
     routing {
         staticResources("/static", "static")
 
         homeRoute()
+        aboutRoute()
     }
 }

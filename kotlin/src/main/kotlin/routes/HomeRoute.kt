@@ -11,6 +11,7 @@ fun Route.homeRoute() {
             head {
                 title { +"Mini-Mult" }
                 link(href = "/static/styles.css", rel = "stylesheet")
+                link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap", rel="stylesheet")
             }
             body {
                 div(classes = "container") {
