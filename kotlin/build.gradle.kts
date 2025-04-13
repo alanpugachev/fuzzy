@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ktor)
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.20"
 }
 
 group = "com.alanpugachev"
@@ -29,4 +30,5 @@ dependencies {
 
     implementation("io.ktor:ktor-server-html-builder:3.1.2")
     implementation("io.ktor:ktor-server-resources:3.1.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
 }
