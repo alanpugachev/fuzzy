@@ -10,8 +10,10 @@ class Question(
     val text: String,
     val category: String,
     val reverse_scored: Boolean
-)
-
-val questions = Json.decodeFromString<List<Question>>(
-    File("resources/questions.json").readText()
-)
+) {
+    companion object {
+        val questions = Json.decodeFromString<List<Question>>(
+            File("kotlin/src/main/resources/questions.json").readText()
+        )
+    }
+}

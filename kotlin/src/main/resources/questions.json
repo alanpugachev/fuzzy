@@ -1,0 +1,428 @@
+[
+  {
+    "id": 1,
+    "text": "I like mechanics magazines.",
+    "category": "general",
+    "reverse_scored": false
+  },
+  {
+    "id": 2,
+    "text": "I have a good appetite.",
+    "category": "hypochondriasis",
+    "reverse_scored": true
+  },
+  {
+    "id": 3,
+    "text": "I wake up fresh and rested most mornings.",
+    "category": "depression",
+    "reverse_scored": true
+  },
+  {
+    "id": 4,
+    "text": "I think I would like the work of a librarian.",
+    "category": "social_introversion",
+    "reverse_scored": false
+  },
+  {
+    "id": 5,
+    "text": "I am easily awakened by noise.",
+    "category": "general",
+    "reverse_scored": false
+  },
+  {
+    "id": 6,
+    "text": "I like to read newspaper articles on crime.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 7,
+    "text": "My hands and feet are usually warm enough.",
+    "category": "hypochondriasis",
+    "reverse_scored": true
+  },
+  {
+    "id": 8,
+    "text": "My daily life is full of things that keep me interested.",
+    "category": "depression",
+    "reverse_scored": true
+  },
+  {
+    "id": 9,
+    "text": "I am about as able to work as I ever was.",
+    "category": "depression",
+    "reverse_scored": true
+  },
+  {
+    "id": 10,
+    "text": "There seems to be a lump in my throat most of the time.",
+    "category": "hysteria",
+    "reverse_scored": false
+  },
+  {
+    "id": 11,
+    "text": "A person should try to understand his dreams and be guided by them.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 12,
+    "text": "I enjoy detective or mystery stories.",
+    "category": "general",
+    "reverse_scored": false
+  },
+  {
+    "id": 13,
+    "text": "I work under a great deal of tension.",
+    "category": "psychasthenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 14,
+    "text": "I have diarrhea once a month or more.",
+    "category": "hypochondriasis",
+    "reverse_scored": false
+  },
+  {
+    "id": 15,
+    "text": "Once in a while, I think of things too bad to talk about.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 16,
+    "text": "I am sure I get a raw deal from life.",
+    "category": "depression",
+    "reverse_scored": false
+  },
+  {
+    "id": 17,
+    "text": "My father was a good man.",
+    "category": "general",
+    "reverse_scored": true
+  },
+  {
+    "id": 18,
+    "text": "I am very seldom troubled by constipation.",
+    "category": "hypochondriasis",
+    "reverse_scored": true
+  },
+  {
+    "id": 19,
+    "text": "When I take a new job, I like to be tipped off on who should be gotten next to.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 20,
+    "text": "My sex life is satisfactory.",
+    "category": "general",
+    "reverse_scored": true
+  },
+  {
+    "id": 21,
+    "text": "At times I have very much wanted to leave home.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 22,
+    "text": "At times I have fits of laughing and crying that I cannot control.",
+    "category": "hysteria",
+    "reverse_scored": false
+  },
+  {
+    "id": 23,
+    "text": "I am troubled by attacks of nausea and vomiting.",
+    "category": "hypochondriasis",
+    "reverse_scored": false
+  },
+  {
+    "id": 24,
+    "text": "No one seems to understand me.",
+    "category": "paranoia",
+    "reverse_scored": false
+  },
+  {
+    "id": 25,
+    "text": "I would like to be a singer.",
+    "category": "general",
+    "reverse_scored": false
+  },
+  {
+    "id": 26,
+    "text": "I feel that it is certainly best to keep my mouth shut when I’m in trouble.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 27,
+    "text": "Evil spirits possess me at times.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 28,
+    "text": "When someone does me a wrong, I feel I should pay him back if I can, just for the principle of the thing.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 29,
+    "text": "I am bothered by acid stomach several times a week.",
+    "category": "hypochondriasis",
+    "reverse_scored": false
+  },
+  {
+    "id": 30,
+    "text": "At times I feel like swearing.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 31,
+    "text": "I have nightmares every few nights.",
+    "category": "psychasthenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 32,
+    "text": "I find it hard to keep my mind on a task or job.",
+    "category": "psychasthenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 33,
+    "text": "I have had very peculiar and strange experiences.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 34,
+    "text": "I have a cough most of the time.",
+    "category": "hypochondriasis",
+    "reverse_scored": false
+  },
+  {
+    "id": 35,
+    "text": "If people had not had it in for me, I would have been much more successful.",
+    "category": "paranoia",
+    "reverse_scored": false
+  },
+  {
+    "id": 36,
+    "text": "I seldom worry about my health.",
+    "category": "hypochondriasis",
+    "reverse_scored": true
+  },
+  {
+    "id": 37,
+    "text": "I have never been in trouble because of my sex behavior.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": true
+  },
+  {
+    "id": 38,
+    "text": "During one period when I was a youngster, I engaged in petty thievery.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 39,
+    "text": "At times I feel like smashing things.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 40,
+    "text": "Most any time I would rather sit and daydream than to do anything else.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 41,
+    "text": "I have had periods of days, weeks, or months when I couldn’t take care of things because I couldn’t “get going.”",
+    "category": "depression",
+    "reverse_scored": false
+  },
+  {
+    "id": 42,
+    "text": "My family does not like the work I have chosen (or the work I intend to choose for my life work).",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 43,
+    "text": "I sleep fitfully, disturbedly.",
+    "category": "psychasthenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 44,
+    "text": "Much of the time my head seems to hurt all over.",
+    "category": "hypochondriasis",
+    "reverse_scored": false
+  },
+  {
+    "id": 45,
+    "text": "I do not always tell the truth.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 46,
+    "text": "My judgment is better than it ever was.",
+    "category": "general",
+    "reverse_scored": true
+  },
+  {
+    "id": 47,
+    "text": "Once a week or oftener I feel suddenly hot all over without apparent cause.",
+    "category": "hysteria",
+    "reverse_scored": false
+  },
+  {
+    "id": 48,
+    "text": "When I am with people, I am bothered by hearing very queer things.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 49,
+    "text": "It would be better if almost all laws were thrown away.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 50,
+    "text": "My soul sometimes leaves my body.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 51,
+    "text": "I am in just as good physical health as most of my friends.",
+    "category": "hypochondriasis",
+    "reverse_scored": true
+  },
+  {
+    "id": 52,
+    "text": "I prefer to pass by school friends, or people I know but have not seen for a long time, unless they speak to me first.",
+    "category": "social_introversion",
+    "reverse_scored": false
+  },
+  {
+    "id": 53,
+    "text": "A minister can cure disease by praying and putting his hand on your head.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 54,
+    "text": "I am liked by most people who know me.",
+    "category": "social_introversion",
+    "reverse_scored": true
+  },
+  {
+    "id": 55,
+    "text": "I am almost never bothered by pains over the heart or in my chest.",
+    "category": "hypochondriasis",
+    "reverse_scored": true
+  },
+  {
+    "id": 56,
+    "text": "As a youngster, I was suspended from school one or more times for cutting up.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 57,
+    "text": "I am a good mixer.",
+    "category": "social_introversion",
+    "reverse_scored": true
+  },
+  {
+    "id": 58,
+    "text": "Everything is turning out just like the prophets of the Bible said it would.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 59,
+    "text": "I have often had to take orders from someone who did not know as much as I did.",
+    "category": "paranoia",
+    "reverse_scored": false
+  },
+  {
+    "id": 60,
+    "text": "I do not read every editorial in the newspaper every day.",
+    "category": "general",
+    "reverse_scored": true
+  },
+  {
+    "id": 61,
+    "text": "I have not lived the right kind of life.",
+    "category": "depression",
+    "reverse_scored": false
+  },
+  {
+    "id": 62,
+    "text": "Parts of my body often have feelings like burning, tingling, crawling, or like “going to sleep.”",
+    "category": "hysteria",
+    "reverse_scored": false
+  },
+  {
+    "id": 63,
+    "text": "I have had no difficulty in starting or holding my urine.",
+    "category": "hypochondriasis",
+    "reverse_scored": true
+  },
+  {
+    "id": 64,
+    "text": "I commonly hear voices without knowing where they come from.",
+    "category": "schizophrenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 65,
+    "text": "I sometimes keep on at a thing until others lose their patience with me.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 66,
+    "text": "I would enjoy the car of a race driver.",
+    "category": "general",
+    "reverse_scored": false
+  },
+  {
+    "id": 67,
+    "text": "I sometimes feel that I am about to go to pieces.",
+    "category": "psychasthenia",
+    "reverse_scored": false
+  },
+  {
+    "id": 68,
+    "text": "I like to gossip at times.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  },
+  {
+    "id": 69,
+    "text": "I have certainly had more than my share of things to worry about.",
+    "category": "depression",
+    "reverse_scored": false
+  },
+  {
+    "id": 70,
+    "text": "I hardly ever feel pain in the back of the neck.",
+    "category": "hypochondriasis",
+    "reverse_scored": true
+  },
+  {
+    "id": 71,
+    "text": "I am very strongly attracted by members of my own sex.",
+    "category": "psychopathic_deviate",
+    "reverse_scored": false
+  }
+]

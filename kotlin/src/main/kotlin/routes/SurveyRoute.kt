@@ -1,11 +1,14 @@
 package routes
 
+import com.alanpugachev.entities.Question
 import io.ktor.server.html.*
 import io.ktor.server.routing.*
 import kotlinx.html.*
 
 fun Route.surveyRoute() {
     get("/survey") {
+        val questions: List<Question> = Question.questions
+
         call.respondHtml {
             head {
                 title { +"Survey" }
@@ -36,27 +39,29 @@ fun Route.surveyRoute() {
                             }
 
                             form(classes = "survey-form") {
-                                div(classes = "survey-question") {
-                                    h3 { +"How often do you feel anxious in social situations?" }
+                                questions.forEach { question ->
+                                    div(classes = "survey-question") {
+                                        h3 { +question.text }
 
-                                    div(classes = "rating-scale") {
-                                        span { +"1 - Never" }
-                                        span { +"2 - Rarely" }
-                                        span { +"3 - Sometimes" }
-                                        span { +"4 - Often" }
-                                        span { +"5 - Always" }
-                                    }
+                                        div(classes = "rating-scale") {
+                                            span { +"1 - Never" }
+                                            span { +"2 - Rarely" }
+                                            span { +"3 - Sometimes" }
+                                            span { +"4 - Often" }
+                                            span { +"5 - Always" }
+                                        }
 
-                                    div(classes = "radio-group") {
-                                        (1..5).forEach { num ->
-                                            div(classes = "radio-option") {
-                                                input(type = InputType.radio, name = "anxiety-level") {
-                                                    id = "option$num"
-                                                    value = "$num"
-                                                }
-                                                label {
-                                                    htmlFor = "option$num"
-                                                    +"$num"
+                                        div(classes = "radio-group") {
+                                            (1..5).forEach { num ->
+                                                div(classes = "radio-option") {
+                                                    input(type = InputType.radio, name = "anxiety-level") {
+                                                        id = "option$num"
+                                                        value = "$num"
+                                                    }
+                                                    label {
+                                                        htmlFor = "option$num"
+                                                        +"$num"
+                                                    }
                                                 }
                                             }
                                         }
