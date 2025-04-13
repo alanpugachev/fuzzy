@@ -2,6 +2,7 @@ package routes
 
 import com.alanpugachev.entities.Question
 import io.ktor.server.html.*
+import io.ktor.server.request.*
 import io.ktor.server.routing.*
 import kotlinx.html.*
 
@@ -38,28 +39,28 @@ fun Route.surveyRoute() {
                                 +"Please answer honestly based on your feelings. There are no right or wrong answers."
                             }
 
-                            form(classes = "survey-form") {
+                            form(classes = "survey-form", action = "/submit-survey", method = FormMethod.post) {
                                 questions.forEach { question ->
                                     div(classes = "survey-question") {
                                         h3 { +question.text }
 
                                         div(classes = "rating-scale") {
-                                            span { +"1 - Never" }
-                                            span { +"2 - Rarely" }
-                                            span { +"3 - Sometimes" }
-                                            span { +"4 - Often" }
-                                            span { +"5 - Always" }
+                                            span { +"Never" }
+                                            span { +"Rarely" }
+                                            span { +"Sometimes" }
+                                            span { +"Often" }
+                                            span { +"Always" }
                                         }
 
                                         div(classes = "radio-group") {
                                             (1..5).forEach { num ->
                                                 div(classes = "radio-option") {
-                                                    input(type = InputType.radio, name = "anxiety-level") {
-                                                        id = "option$num"
+                                                    input(type = InputType.radio, name = "q${question.id}") {
+                                                        id = "q${question.id}_$num"
                                                         value = "$num"
                                                     }
                                                     label {
-                                                        htmlFor = "option$num"
+                                                        htmlFor = "q${question.id}_$num"
                                                         +"$num"
                                                     }
                                                 }
@@ -69,7 +70,7 @@ fun Route.surveyRoute() {
                                 }
 
                                 button(type = ButtonType.submit, classes = "submit-button") {
-                                    +"Submit Answer"
+                                    +"Submit"
                                 }
                             }
                         }
@@ -77,5 +78,13 @@ fun Route.surveyRoute() {
                 }
             }
         }
+    }
+
+    post("/submit-survey") {
+        val params = call.receiveParameters()
+
+        println(params)
+
+        /* todo params handler (convert to json) */
     }
 }
