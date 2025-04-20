@@ -1,12 +1,15 @@
 package routes
 
 import com.alanpugachev.entities.Question
+import com.alanpugachev.services.KafkaProducerService
 import io.ktor.server.html.*
 import io.ktor.server.request.*
 import io.ktor.server.routing.*
 import kotlinx.html.*
 
 fun Route.surveyRoute() {
+    val kafkaProducerService = KafkaProducerService()
+
     get("/survey") {
         val questions: List<Question> = Question.questions
 
@@ -83,8 +86,13 @@ fun Route.surveyRoute() {
     post("/submit-survey") {
         val params = call.receiveParameters()
 
-        println(params)
-
-        /* todo params handler (convert to json) */
+        runCatching {
+            kafkaProducerService.sendMessaage(
+                topic = "kraft-topic",
+                value = "amogus"
+            )
+        }
+            .onFailure { println("fail: ${it.message}") }
+            .onSuccess { println("bomba") }
     }
 }

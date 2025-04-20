@@ -31,4 +31,6 @@ dependencies {
     implementation("io.ktor:ktor-server-html-builder:3.1.2")
     implementation("io.ktor:ktor-server-resources:3.1.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+    implementation("org.apache.kafka:kafka-clients:3.6.0")
+    implementation("org.slf4j:slf4j-simple:2.0.9")
 }
