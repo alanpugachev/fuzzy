@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  kafka:
+    image: apache/kafka:4.0.0
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      - CLUSTER_ID=4Lzzg3FhTJK1cQwZk3fBvw
+      - NODE_ID=1
+      - PROCESS_ROLES=broker,controller
+      - CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
+      - ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - ADVERTISED_HOST_NAME=localhost
+      - CONTROLLER_QUORUM_VOTERS=1@kafka:9093
+    volumes:
+      - kafka_data:/tmp/kafka-logs
+
+volumes:
+  kafka_data:

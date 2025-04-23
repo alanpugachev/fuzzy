@@ -9,7 +9,7 @@ def consume_messages():
     }
     
     consumer = Consumer(conf)
-    consumer.subscribe(['kraft-topic'])
+    consumer.subscribe(['kraftt'])
 
     try:
         while True:
@@ -17,18 +17,16 @@ def consume_messages():
             if msg is None:
                 continue
             if msg.error():
-                print(f"Ошибка: {msg.error()}")
+                print(f"Error: {msg.error()}")
                 continue
             
-            print(f"Асинхронно получено: {msg.value().decode('utf-8')}")
+            print(f"Received: {msg.value().decode('utf-8')}")
     finally:
         consumer.close()
 
-# Запуск в отдельном потоке
 consumer_thread = threading.Thread(target=consume_messages)
 consumer_thread.daemon = True
 consumer_thread.start()
 
-# Основной поток может выполнять другие задачи
 print("Working detached...")
-consumer_thread.join()  # Ожидание завершения
+consumer_thread.join()

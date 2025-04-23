@@ -1,14 +1,21 @@
 package routes
 
+import com.alanpugachev.entities.Answer
 import com.alanpugachev.entities.Question
 import com.alanpugachev.services.KafkaProducerService
+import com.alanpugachev.vo.AnswerValue
+import io.ktor.http.*
 import io.ktor.server.html.*
 import io.ktor.server.request.*
 import io.ktor.server.routing.*
 import kotlinx.html.*
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.encodeToJsonElement
 
 fun Route.surveyRoute() {
-    val kafkaProducerService = KafkaProducerService()
+    val kafkaProducerService = KafkaProducerService(
+        serializer = Answer.serializer()
+    )
 
     get("/survey") {
         val questions: List<Question> = Question.questions
@@ -84,15 +91,22 @@ fun Route.surveyRoute() {
     }
 
     post("/submit-survey") {
-        val params = call.receiveParameters()
+        val params = call
+            .receiveParameters()
+            .entries()
+            .associate { it.key to it.value.first() }
+            .map {
+                Answer(it.key, AnswerValue(it.value.toInt()))
+            }
+            .let { params ->
+                Json.encodeToString(params)
+            }
 
         runCatching {
-            kafkaProducerService.sendMessaage(
-                topic = "kraft-topic",
-                value = "amogus"
+            kafkaProducerService.sendMessage(
+                topic = "kraftt",
+                value = params
             )
         }
-            .onFailure { println("fail: ${it.message}") }
-            .onSuccess { println("bomba") }
     }
 }
