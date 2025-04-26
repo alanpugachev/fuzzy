@@ -2,20 +2,16 @@ package routes
 
 import com.alanpugachev.entities.Answer
 import com.alanpugachev.entities.Question
-import com.alanpugachev.services.KafkaProducerService
+import com.alanpugachev.services.KafkaAnswerProducer
 import com.alanpugachev.vo.AnswerValue
-import io.ktor.http.*
 import io.ktor.server.html.*
 import io.ktor.server.request.*
 import io.ktor.server.routing.*
 import kotlinx.html.*
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.encodeToJsonElement
 
 fun Route.surveyRoute() {
-    val kafkaProducerService = KafkaProducerService(
-        serializer = Answer.serializer()
-    )
+    val kafkaProducerService = KafkaAnswerProducer()
 
     get("/survey") {
         val questions: List<Question> = Question.questions
@@ -97,9 +93,6 @@ fun Route.surveyRoute() {
             .associate { it.key to it.value.first() }
             .map {
                 Answer(it.key, AnswerValue(it.value.toInt()))
-            }
-            .let { params ->
-                Json.encodeToString(params)
             }
 
         runCatching {

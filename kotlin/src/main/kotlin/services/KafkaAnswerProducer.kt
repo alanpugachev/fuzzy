@@ -1,26 +1,26 @@
 package com.alanpugachev.services
 
-import kotlinx.serialization.KSerializer
+import com.alanpugachev.entities.Answer
+import com.alanpugachev.serde.CustomAnswerSerializer
 import kotlinx.serialization.json.Json
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.ProducerRecord
 import org.apache.kafka.clients.producer.RecordMetadata
-import org.apache.kafka.common.serialization.Serializer
 import org.apache.kafka.common.serialization.StringSerializer
 import java.util.*
+import kotlin.collections.List
 
-class KafkaProducerService<T : Any>(
-    private val bootstrapServers: String = "localhost:9092",
-    private val serializer: KSerializer<T>
+class KafkaAnswerProducer(
+    private val bootstrapServers: String = "localhost:9092"
 ) {
-    private val producer: KafkaProducer<String, String>
+    private val producer: KafkaProducer<String, List<Answer>>
     private val jsonFormat = Json { prettyPrint = false }
 
     init {
         val props = Properties().apply {
             put("bootstrap.servers", bootstrapServers)
             put("key.serializer", StringSerializer::class.java)
-            put("value.serializer", KotlinxJsonSerializer::class)
+            put("value.serializer", CustomAnswerSerializer::class.java)
 
             /* optional */
             put("acks", "all") /* granted record */
@@ -35,7 +35,7 @@ class KafkaProducerService<T : Any>(
     fun sendMessage(
         topic: String,
         key: String? = null,
-        value: String
+        value: List<Answer>
     ) {
         val record = ProducerRecord(topic, key, value)
 
@@ -51,14 +51,5 @@ class KafkaProducerService<T : Any>(
     /* close producer */
     fun close() {
         producer.close()
-    }
-
-    private inner class KotlinxJsonSerializer : Serializer<T> {
-        override fun serialize(topic: String, data: T): ByteArray = jsonFormat
-            .encodeToString(serializer, data)
-            .toByteArray()
-
-        override fun close() {}
-        override fun configure(configs: MutableMap<String, *>?, isKey: Boolean) {}
     }
 }
