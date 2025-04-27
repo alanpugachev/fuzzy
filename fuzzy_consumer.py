@@ -1,9 +1,24 @@
 from confluent_kafka import Consumer, KafkaException
+from service import ProcessingFuzzyResultService
 import threading
+import json
+
+def handle_message(message):
+    # Parse JSON and turn into dictionary 
+    data = json.loads(message.value())
+    answers = {item["id"]: item["value"] for item in data}
+    
+    # Get 9 normalized values
+    normalized_9 = ProcessingFuzzyResultService.group_and_normalize(answers)
+    print("Result (9):", normalized_9)
+    
+    # Process values
+    result = ProcessingFuzzyResultService.process_answers(normalized_9)
+    print("Final result:", result)
 
 def consume_messages():
     conf = {
-        'bootstrap.servers': '192.168.31.125:9092',
+        'bootstrap.servers': 'localhost:9092',
         'group.id': 'async-group',
         'auto.offset.reset': 'earliest'
     }
@@ -21,6 +36,8 @@ def consume_messages():
                 continue
             
             print(f"Received: {msg.value().decode('utf-8')}")
+            handle_message(msg)
+
     finally:
         consumer.close()
 

@@ -1,7 +1,7 @@
 package com.alanpugachev.services
 
 import com.alanpugachev.entities.Answer
-import com.alanpugachev.serde.CustomAnswerSerializer
+import com.alanpugachev.serde.AnswerSerializer
 import kotlinx.serialization.json.Json
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.ProducerRecord
@@ -20,7 +20,7 @@ class KafkaAnswerProducer(
         val props = Properties().apply {
             put("bootstrap.servers", bootstrapServers)
             put("key.serializer", StringSerializer::class.java)
-            put("value.serializer", CustomAnswerSerializer::class.java)
+            put("value.serializer", AnswerSerializer::class.java)
 
             /* optional */
             put("acks", "all") /* granted record */

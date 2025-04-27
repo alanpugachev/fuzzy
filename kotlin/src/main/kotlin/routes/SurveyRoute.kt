@@ -8,7 +8,6 @@ import io.ktor.server.html.*
 import io.ktor.server.request.*
 import io.ktor.server.routing.*
 import kotlinx.html.*
-import kotlinx.serialization.json.Json
 
 fun Route.surveyRoute() {
     val kafkaProducerService = KafkaAnswerProducer()
