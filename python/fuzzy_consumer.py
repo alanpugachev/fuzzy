@@ -1,5 +1,5 @@
 from confluent_kafka import Consumer, KafkaException
-from service import ProcessingFuzzyResultService
+from python.service import ProcessingFuzzyResultService
 import threading
 import json
 
