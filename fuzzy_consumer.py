@@ -12,8 +12,8 @@ def handle_message(message):
     normalized_9 = ProcessingFuzzyResultService.group_and_normalize(answers)
     print("Result (9):", normalized_9)
     
-    # Process values
-    result = ProcessingFuzzyResultService.process_answers(normalized_9)
+    # Process values and send
+    result = ProcessingFuzzyResultService.process_and_send(normalized_9)
     print("Final result:", result)
 
 def consume_messages():

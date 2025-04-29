@@ -1,3 +1,4 @@
+from fuzzy_producer import KafkaResultProducer
 import numpy as np
 import skfuzzy as fuzz
 
@@ -107,7 +108,19 @@ class ProcessingFuzzyResultService:
                 membership = fuzz.interp_membership(universe, mf, value)
                 results[category][mf_name] = membership
 
-        print(results)
+        return results
+
+    @staticmethod
+    def process_and_send(data: list[float]):
+        producer = KafkaResultProducer()
+
+        results = ProcessingFuzzyResultService.process_answers(data)
+        producer.send_processed_data(
+            topic='results',
+            data=results
+        )
+
+
 
     @staticmethod
     def group_and_normalize(answers):

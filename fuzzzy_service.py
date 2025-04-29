@@ -2,6 +2,8 @@ import numpy as np
 import skfuzzy as fuzz
 import matplotlib.pyplot as plt
 
+# Don't use this
+
 # Input data (order: Hysteria, Hypochondria, Depression, Psychopathy, 
 # Paranoia, Psychasthenia, Schizophrenia, Hypomania, Introversion)
 data = [0.96, 0.34, 0.45, 0.10, 0.45, 0.69, 0.34, 0.23, 0.78]
