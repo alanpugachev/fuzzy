@@ -1,4 +1,4 @@
-from python.fuzzy_producer import KafkaResultProducer
+from fuzzy_producer import KafkaResultProducer
 import numpy as np
 import skfuzzy as fuzz
 

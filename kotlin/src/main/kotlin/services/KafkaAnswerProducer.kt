@@ -14,7 +14,6 @@ class KafkaAnswerProducer(
     private val bootstrapServers: String = "localhost:9092"
 ) {
     private val producer: KafkaProducer<String, List<Answer>>
-    private val jsonFormat = Json { prettyPrint = false }
 
     init {
         val props = Properties().apply {
