@@ -3,7 +3,6 @@ package routes
 import com.alanpugachev.entities.Answer
 import com.alanpugachev.entities.Question
 import com.alanpugachev.services.KafkaAnswerProducer
-import com.alanpugachev.services.KafkaResultsConsumer
 import com.alanpugachev.vo.AnswerValue
 import io.ktor.server.html.*
 import io.ktor.server.request.*
@@ -12,7 +11,6 @@ import kotlinx.html.*
 
 fun Route.surveyRoute() {
     val kafkaProducerService = KafkaAnswerProducer()
-    val kafkaConsumerService = KafkaResultsConsumer()
 
     get("/survey") {
         val questions: List<Question> = Question.questions

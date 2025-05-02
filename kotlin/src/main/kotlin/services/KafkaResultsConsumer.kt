@@ -6,6 +6,7 @@ import org.apache.kafka.common.serialization.StringDeserializer
 import java.time.Duration
 import java.util.*
 
+@Deprecated("Don't use this")
 class KafkaResultsConsumer(
     private val bootstrapServers: String = "localhost:9092"
 ) {
