@@ -1,7 +1,11 @@
 package com.alanpugachev.apps
 
+import com.alanpugachev.repos.SurveyResultCreateDTO
+import com.alanpugachev.repos.SurveyResultsRepo
 import io.ktor.server.application.*
-import kotlinx.serialization.json.Json
+import kotlinx.datetime.Clock
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
 import org.apache.kafka.clients.consumer.KafkaConsumer
 import org.apache.kafka.common.serialization.StringDeserializer
 import java.time.Duration
@@ -35,12 +39,20 @@ fun configureKafkaConsumer(): KafkaConsumer<String, String> = run {
     KafkaConsumer<String, String>(props)
 }
 
-fun processKafkaRecord(jsonMessage: String) {
-    try {
-        val data = Json.decodeFromString<String>(jsonMessage)
+fun processKafkaRecord(message: String) {
+    val surveyResultsRepo = SurveyResultsRepo()
 
-        /* todo logic here */
-        println("Received message: $data")
+    try {
+        println("received data = $message")
+
+        surveyResultsRepo
+            .create(
+                SurveyResultCreateDTO(
+                    result = message,
+                    createdAt = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()),
+                    updatedAt = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
+                )
+            )
 
     } catch (e: Exception) {
         println("Error processing message: ${e.message}")
