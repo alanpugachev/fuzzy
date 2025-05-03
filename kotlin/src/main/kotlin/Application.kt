@@ -1,5 +1,6 @@
 package com.alanpugachev
 
+import com.alanpugachev.apps.launchKafkaConsumer
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.html.*
@@ -27,6 +28,7 @@ fun main(args: Array<String>) {
 
 fun Application.module() {
     configureRouting()
+    launchKafkaConsumer()
 
     routing {
         get("/health") {

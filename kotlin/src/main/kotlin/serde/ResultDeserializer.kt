@@ -9,11 +9,7 @@ class ResultDeserializer : Deserializer<String> {
 
     override fun deserialize(topic: String?, data: ByteArray?): String =
         try {
-            if (data != null) {
-                data.toString()
-            } else {
-                throw RuntimeException("data is null")
-            }
+            data?.toString() ?: throw RuntimeException("data is null")
         } catch (e: Throwable) {
             logger.error(e.message, e)
             "null"
