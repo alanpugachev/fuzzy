@@ -11,7 +11,7 @@ class ProcessingFuzzyResultService:
         # Dictionary containing all membership functions (trapezoidal)
         membership_functions = {
             # Hysteria membership functions
-            'Hysteria': {
+            'hysteria': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.12, 0.23]),
                 'mid': fuzz.trapmf(universe, [0.12, 0.23, 0.35, 0.43]),
                 'elevated': fuzz.trapmf(universe, [0.35, 0.43, 0.5, 0.57]),
@@ -20,7 +20,7 @@ class ProcessingFuzzyResultService:
             },
             
             # Hypochondria membership functions
-            'Hypochondria': {
+            'hypochondria': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.14, 0.25]),
                 'mid': fuzz.trapmf(universe, [0.14, 0.25, 0.37, 0.44]),
                 'elevated': fuzz.trapmf(universe, [0.37, 0.44, 0.53, 0.6]),
@@ -29,7 +29,7 @@ class ProcessingFuzzyResultService:
             },
             
             # Depression membership functions
-            'Depression': {
+            'depression': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.12, 0.24]),
                 'mid': fuzz.trapmf(universe, [0.12, 0.24, 0.38, 0.47]),
                 'elevated': fuzz.trapmf(universe, [0.38, 0.47, 0.59, 0.66]),
@@ -38,7 +38,7 @@ class ProcessingFuzzyResultService:
             },
             
             # Psychopathy membership functions
-            'Psychopathy': {
+            'psychopathy': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.16, 0.26]),
                 'mid': fuzz.trapmf(universe, [0.16, 0.26, 0.41, 0.53]),
                 'elevated': fuzz.trapmf(universe, [0.41, 0.53, 0.58, 0.62]),
@@ -47,7 +47,7 @@ class ProcessingFuzzyResultService:
             },
             
             # Paranoia membership functions
-            'Paranoia': {
+            'paranoia': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.15, 0.26]),
                 'mid': fuzz.trapmf(universe, [0.15, 0.26, 0.39, 0.49]),
                 'elevated': fuzz.trapmf(universe, [0.39, 0.49, 0.61, 0.67]),
@@ -56,7 +56,7 @@ class ProcessingFuzzyResultService:
             },
             
             # Psychasthenia membership functions
-            'Psychasthenia': {
+            'psychasthenia': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.18, 0.29]),
                 'mid': fuzz.trapmf(universe, [0.18, 0.29, 0.41, 0.51]),
                 'elevated': fuzz.trapmf(universe, [0.41, 0.51, 0.64, 0.68]),
@@ -65,7 +65,7 @@ class ProcessingFuzzyResultService:
             },
             
             # Schizophrenia membership functions
-            'Schizophrenia': {
+            'schizophrenia': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.17, 0.28]),
                 'mid': fuzz.trapmf(universe, [0.17, 0.28, 0.44, 0.55]),
                 'elevated': fuzz.trapmf(universe, [0.44, 0.55, 0.67, 0.7]),
@@ -74,7 +74,7 @@ class ProcessingFuzzyResultService:
             },
             
             # Hypomania membership functions
-            'Hypomania': {
+            'hypomania': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.16, 0.27]),
                 'mid': fuzz.trapmf(universe, [0.16, 0.27, 0.45, 0.56]),
                 'elevated': fuzz.trapmf(universe, [0.45, 0.56, 0.68, 0.71]),
@@ -83,7 +83,7 @@ class ProcessingFuzzyResultService:
             },
             
             # Introversion membership functions
-            'Introversion': {
+            'introversion': {
                 'low': fuzz.trapmf(universe, [-0.1, 0, 0.16, 0.29]),
                 'mid': fuzz.trapmf(universe, [0.16, 0.29, 0.48, 0.58]),
                 'elevated': fuzz.trapmf(universe, [0.48, 0.58, 0.67, 0.72]),
@@ -95,8 +95,8 @@ class ProcessingFuzzyResultService:
         # Process each data point through corresponding membership functions
         results = {}
         categories_order = [
-            'Hysteria', 'Hypochondria', 'Depression', 'Psychopathy',
-            'Paranoia', 'Psychasthenia', 'Schizophrenia', 'Hypomania', 'Introversion'
+            'hysteria', 'hypochondria', 'depression', 'psychopathy',
+            'paranoia', 'psychasthenia', 'schizophrenia', 'hypomania', 'introversion'
         ]
 
         for i, category in enumerate(categories_order):

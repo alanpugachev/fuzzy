@@ -4,10 +4,15 @@ import com.alanpugachev.entities.Answer
 import com.alanpugachev.entities.Question
 import com.alanpugachev.services.KafkaAnswerProducer
 import com.alanpugachev.vo.AnswerValue
+import io.ktor.http.ContentType
+import io.ktor.http.HttpStatusCode
 import io.ktor.server.html.*
 import io.ktor.server.request.*
+import io.ktor.server.response.respondText
 import io.ktor.server.routing.*
+import kotlinx.coroutines.delay
 import kotlinx.html.*
+import kotlin.time.Duration.Companion.seconds
 
 fun Route.surveyRoute() {
     val kafkaProducerService = KafkaAnswerProducer()
@@ -31,9 +36,6 @@ fun Route.surveyRoute() {
                             }
                             a(href = "/about") {
                                 button(classes = "nav-button") { +"About" }
-                            }
-                            a(href = "/results") {
-                                button(classes = "nav-button active") { +"Results" }
                             }
                         }
 
@@ -86,6 +88,58 @@ fun Route.surveyRoute() {
     }
 
     post("/submit-survey") {
+        call.respondText(
+            """
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Processing Survey</title>
+                <style>
+                    .loader {
+                        border: 8px solid #f3f3f3;
+                        border-top: 8px solid #3498db;
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                        animation: spin 2s linear infinite;
+                        margin: 20px auto;
+                    }
+                    @keyframes spin {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+                    .timer {
+                        text-align: center;
+                        font-family: Arial, sans-serif;
+                        font-size: 18px;
+                        margin-top: 20px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="loader"></div>
+                <div class="timer" id="countdown">Processing your results... </div>
+                
+                <script>
+                    let seconds = 5;
+                    const countdown = document.getElementById('countdown');
+                    
+                    const interval = setInterval(() => {
+                        seconds--;
+                        countdown.textContent = `Processing your results...`;
+                        
+                        if (seconds <= 0) {
+                            clearInterval(interval);
+                            window.location.href = '/results'; // Перенаправление после завершения
+                        }
+                    }, 1000);
+                </script>
+            </body>
+            </html>
+        """.trimIndent(),
+            ContentType.Text.Html
+        )
+
         val params = call
             .receiveParameters()
             .entries()
@@ -94,11 +148,15 @@ fun Route.surveyRoute() {
                 Answer(it.key, AnswerValue(it.value.toInt()))
             }
 
+        delay(5.seconds)
+
         runCatching {
             kafkaProducerService.sendMessage(
                 topic = "kraftt",
                 value = params
             )
+        }.onFailure {
+            call.respondText("Error processing survey: ${it.message}", status = HttpStatusCode.InternalServerError)
         }
     }
 }

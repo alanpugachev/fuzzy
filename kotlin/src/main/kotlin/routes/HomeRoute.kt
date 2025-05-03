@@ -22,9 +22,6 @@ fun Route.homeRoute() {
                             a(href = "/about") {
                                 button(classes = "nav-button") { +"About" }
                             }
-                            a(href = "/results") {
-                                button(classes = "nav-button") { +"Results" }
-                            }
                         }
 
                         main(classes = "content-box") {

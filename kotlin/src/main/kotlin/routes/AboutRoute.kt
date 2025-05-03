@@ -38,7 +38,6 @@ fun Route.aboutRoute() {
                             a(href = "/about") {
                                 button(classes = "nav-button active") { +"About" }
                             }
-                            a(href = "/results") { button(classes = "nav-button") { +"Results" } }
                         }
 
                         main(classes = "content-box") {
@@ -49,9 +48,9 @@ fun Route.aboutRoute() {
                             h2 { +"Minnesota Multiphasic Personality Inventory" }
                             p {
                                 +"""The MMPI is a psychological assessment tool developed to identify 
-                            personality structure and psychopathology. This Mini-Mult version 
-                            provides a shortened (71 items) yet valid alternative to the full 
-                            567-item test."""
+                                personality structure and psychopathology. This Mini-Mult version 
+                                provides a shortened (71 items) yet valid alternative to the full 
+                                567-item test."""
                             }
 
                             h3 { +"Key Features:" }

@@ -1,11 +1,13 @@
 package com.alanpugachev.apps
 
+import com.alanpugachev.entities.SurveyResult
 import com.alanpugachev.repos.SurveyResultCreateDTO
 import com.alanpugachev.repos.SurveyResultsRepo
 import io.ktor.server.application.*
 import kotlinx.datetime.Clock
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
+import kotlinx.serialization.json.Json
 import org.apache.kafka.clients.consumer.KafkaConsumer
 import org.apache.kafka.common.serialization.StringDeserializer
 import java.time.Duration
@@ -45,10 +47,12 @@ fun processKafkaRecord(message: String) {
     try {
         println("received data = $message")
 
+        val result: SurveyResult = Json.decodeFromString<SurveyResult>(message)
+
         surveyResultsRepo
             .create(
                 SurveyResultCreateDTO(
-                    result = message,
+                    result = result,
                     createdAt = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()),
                     updatedAt = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
                 )
