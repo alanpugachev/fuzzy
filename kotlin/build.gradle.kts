@@ -49,4 +49,6 @@ dependencies {
 
     /* postgresql */
     implementation("org.postgresql:postgresql:42.7.5")
+    implementation("com.zaxxer:HikariCP:5.0.1")
+    implementation("com.typesafe:config:1.4.2")
 }
