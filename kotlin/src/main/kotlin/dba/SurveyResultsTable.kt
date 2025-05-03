@@ -7,7 +7,7 @@ import org.jetbrains.exposed.sql.kotlin.datetime.datetime
 
 object SurveyResultsTable : IntIdTable("survey_results") {
     val results = jsonb<String>(
-        name = "results",
+        name = "result",
         jsonConfig = Json { prettyPrint = true }
     )
     val createdAt = datetime(name = "created_at")

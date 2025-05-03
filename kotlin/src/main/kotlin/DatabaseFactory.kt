@@ -33,9 +33,9 @@ object DatabaseFactory {
         transaction {
             try {
                 exec("SELECT 1") {}
-                println("✅ Database connection established")
+                println("Database connection established")
             } catch (e: Exception) {
-                println("❌ Database connection failed: ${e.message}")
+                println("Database connection failed: ${e.message}")
                 throw e
             }
         }

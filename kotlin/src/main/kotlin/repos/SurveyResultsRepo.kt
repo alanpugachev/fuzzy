@@ -10,7 +10,7 @@ class SurveyResultsRepo {
     fun create(dto: SurveyResultCreateDTO): Result<Int> = runCatching {
         transaction {
             SurveyResultsTable.insert {
-                it[results] = dto.results
+                it[results] = dto.result
                 it[createdAt] = dto.createdAt
                 it[updatedAt] = dto.updatedAt
             } [SurveyResultsTable.id].value
@@ -40,7 +40,7 @@ class SurveyResultsRepo {
 }
 
 data class SurveyResultCreateDTO(
-    val results: String,
+    val result: String,
     val createdAt: LocalDateTime,
     val updatedAt: LocalDateTime
 )
