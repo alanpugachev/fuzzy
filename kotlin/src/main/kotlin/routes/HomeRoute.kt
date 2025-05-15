@@ -17,50 +17,50 @@ fun Route.homeRoute() {
                     div(classes = "content-wrapper") {
                         div(classes = "navbar") {
                             a(href = "/") {
-                                button(classes = "nav-button") { +"Home" }
+                                button(classes = "nav-button") { +"Главная" }
                             }
                             a(href = "/about") {
-                                button(classes = "nav-button") { +"About" }
+                                button(classes = "nav-button") { +"О проекте" }
                             }
                         }
 
                         main(classes = "content-box") {
-                            h1 { +"Mini-Mult Assessment" }
+                            h1 { +"Оценка Mini-Mult" }
 
                             div(classes = "highlight-box") {
                                 p {
-                                    +"""A shortened 71-item version of the MMPI that maintains clinical validity 
-                                    while reducing administration time by 80% compared to the full 567-item test.""".trimMargin()
+                                    +"""Сокращённая 71-пунктовая версия MMPI, сохраняющая клиническую валидность 
+                    при сокращении времени тестирования на 80% по сравнению с полным 567-пунктовым тестом.""".trimMargin()
                                 }
                             }
 
-                            h2 { +"Key Characteristics" }
+                            h2 { +"Ключевые характеристики" }
                             ul(classes = "feature-list") {
-                                li { strong { +"71 items (original MMPI has 567)" } }
-                                li { strong { +"20-30 minutes completion time" } }
-                                li { strong { +"10 clinical scales matching the full MMPI" } }
-                                li { strong { +"3 validity scales (L, F, K) to detect response biases" } }
-                                li { strong { +"Same scoring and interpretation as standard MMPI" } }
+                                li { strong { +"71 пункт (в оригинальном MMPI - 567)" } }
+                                li { strong { +"Время прохождения 20-30 минут" } }
+                                li { strong { +"10 клинических шкал, как в полном MMPI" } }
+                                li { strong { +"3 шкалы валидности (L, F, K) для выявления искажений ответов" } }
+                                li { strong { +"Такие же подсчёт и интерпретация, как в стандартном MMPI" } }
                             }
 
-                            h2 { +"Common Uses" }
+                            h2 { +"Типичные применения" }
                             div(classes = "uses-grid") {
-                                div(classes = "use-card") { +"Initial clinical screening" }
-                                div(classes = "use-card") { +"Research studies" }
-                                div(classes = "use-card") { +"Brief personality assessment" }
-                                div(classes = "use-card") { +"Settings requiring rapid evaluation" }
+                                div(classes = "use-card") { +"Первичный клинический скрининг" }
+                                div(classes = "use-card") { +"Научные исследования" }
+                                div(classes = "use-card") { +"Краткая оценка личности" }
+                                div(classes = "use-card") { +"Ситуации, требующие быстрой оценки" }
                             }
 
                             div(classes = "survey-action") {
                                 a(href = "/survey") {
                                     button(classes = "survey-button") {
-                                        +"Take Survey"
+                                        +"Пройти тест"
                                     }
                                 }
                             }
 
                             p(classes = "disclaimer") {
-                                +"Note: While efficient, the Mini-Mult may miss subtle nuances detected by the full MMPI."
+                                +"Примечание: Несмотря на эффективность, Mini-Mult может упускать тонкие нюансы, выявляемые полной версией MMPI."
                             }
                         }
                     }

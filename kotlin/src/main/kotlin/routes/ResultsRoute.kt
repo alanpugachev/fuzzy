@@ -35,7 +35,7 @@ fun Route.resultsRoute() {
 
         call.respondHtml {
             head {
-                title { +"Survey" }
+                title { +"Мини-мульт" }
                 link(href = "/static/styles.css", rel = "stylesheet")
                 link(href = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap",
                     rel = "stylesheet")
@@ -45,24 +45,24 @@ fun Route.resultsRoute() {
                     div(classes = "content-wrapper") {
                         div(classes = "navbar") {
                             a(href = "/") {
-                                button(classes = "nav-button") { +"Home" }
+                                button(classes = "nav-button") { +"Главная" }
                             }
                             a(href = "/about") {
-                                button(classes = "nav-button") { +"About" }
+                                button(classes = "nav-button") { +"О проекте" }
                             }
                         }
                     }
 
                     main(classes = "content-box") {
-                        h1 { +"Psychological Survey Results" }
+                        h1 { +"Результаты" }
                         table {
                             tr {
-                                th { +"Scale" }
-                                th { +"Low" }
-                                th { +"Mid" }
-                                th { +"Elevated" }
-                                th { +"High" }
-                                th { +"Very High" }
+                                th { +"Шкала" }
+                                th { +"Низкий" }
+                                th { +"Средний" }
+                                th { +"Повышенный" }
+                                th { +"Высокий" }
+                                th { +"Очень высокий" }
                             }
 
                             surveyResultsRepo
@@ -71,15 +71,15 @@ fun Route.resultsRoute() {
                                 .last()
                                 .let { result ->
                                     listOf(
-                                        "Hysteria" to result.hysteria,
-                                        "Hypochondria" to result.hypochondria,
-                                        "Depression" to result.depression,
-                                        "Psychopathy" to result.psychopathy,
-                                        "Paranoia" to result.paranoia,
-                                        "Psychasthenia" to result.psychasthenia,
-                                        "Schizophrenia" to result.schizophrenia,
-                                        "Hypomania" to result.hypomania,
-                                        "Introversion" to result.introversion
+                                        "Истерия" to result.hysteria,
+                                        "Ипохондрия" to result.hypochondria,
+                                        "Депрессия" to result.depression,
+                                        "Психопатия" to result.psychopathy,
+                                        "Паранойа" to result.paranoia,
+                                        "Психостения" to result.psychasthenia,
+                                        "Шизофрения" to result.schizophrenia,
+                                        "Гипомания" to result.hypomania,
+                                        "Интроверсия" to result.introversion
                                     ).forEach { (scaleName, levels) ->
                                         tr {
                                             td {

@@ -1,427 +1,427 @@
 [
   {
     "id": 1,
-    "text": "I like mechanics magazines.",
+    "text": "Мне нравятся журналы о механике.",
     "category": "general",
     "reverse_scored": false
   },
   {
     "id": 2,
-    "text": "I have a good appetite.",
+    "text": "У меня хороший аппетит.",
     "category": "hypochondriasis",
     "reverse_scored": true
   },
   {
     "id": 3,
-    "text": "I wake up fresh and rested most mornings.",
+    "text": "Большинство утр я просыпаюсь свежим и отдохнувшим.",
     "category": "depression",
     "reverse_scored": true
   },
   {
     "id": 4,
-    "text": "I think I would like the work of a librarian.",
+    "text": "Я думаю, что мне бы понравилась работа библиотекаря.",
     "category": "social_introversion",
     "reverse_scored": false
   },
   {
     "id": 5,
-    "text": "I am easily awakened by noise.",
+    "text": "Меня легко разбудить шумом.",
     "category": "general",
     "reverse_scored": false
   },
   {
     "id": 6,
-    "text": "I like to read newspaper articles on crime.",
+    "text": "Мне нравится читать газетные статьи о преступлениях.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 7,
-    "text": "My hands and feet are usually warm enough.",
+    "text": "Мои руки и ноги обычно достаточно тёплые.",
     "category": "hypochondriasis",
     "reverse_scored": true
   },
   {
     "id": 8,
-    "text": "My daily life is full of things that keep me interested.",
+    "text": "Моя повседневная жизнь полна вещей, которые меня интересуют.",
     "category": "depression",
     "reverse_scored": true
   },
   {
     "id": 9,
-    "text": "I am about as able to work as I ever was.",
+    "text": "Я способен работать так же хорошо, как и всегда.",
     "category": "depression",
     "reverse_scored": true
   },
   {
     "id": 10,
-    "text": "There seems to be a lump in my throat most of the time.",
+    "text": "Большую часть времени у меня будто ком в горле.",
     "category": "hysteria",
     "reverse_scored": false
   },
   {
     "id": 11,
-    "text": "A person should try to understand his dreams and be guided by them.",
+    "text": "Человек должен пытаться понимать свои сны и руководствоваться ими.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 12,
-    "text": "I enjoy detective or mystery stories.",
+    "text": "Мне нравятся детективы или истории о тайнах.",
     "category": "general",
     "reverse_scored": false
   },
   {
     "id": 13,
-    "text": "I work under a great deal of tension.",
+    "text": "Я работаю под большим напряжением.",
     "category": "psychasthenia",
     "reverse_scored": false
   },
   {
     "id": 14,
-    "text": "I have diarrhea once a month or more.",
+    "text": "У меня бывает диарея раз в месяц или чаще.",
     "category": "hypochondriasis",
     "reverse_scored": false
   },
   {
     "id": 15,
-    "text": "Once in a while, I think of things too bad to talk about.",
+    "text": "Иногда я думаю о вещах, которые слишком плохи, чтобы говорить о них.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 16,
-    "text": "I am sure I get a raw deal from life.",
+    "text": "Я уверен, что жизнь относится ко мне несправедливо.",
     "category": "depression",
     "reverse_scored": false
   },
   {
     "id": 17,
-    "text": "My father was a good man.",
+    "text": "Мой отец был хорошим человеком.",
     "category": "general",
     "reverse_scored": true
   },
   {
     "id": 18,
-    "text": "I am very seldom troubled by constipation.",
+    "text": "Я очень редко страдаю от запоров.",
     "category": "hypochondriasis",
     "reverse_scored": true
   },
   {
     "id": 19,
-    "text": "When I take a new job, I like to be tipped off on who should be gotten next to.",
+    "text": "Когда я устраиваюсь на новую работу, мне нравится, когда мне подсказывают, с кем нужно наладить отношения.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 20,
-    "text": "My sex life is satisfactory.",
+    "text": "Моя сексуальная жизнь меня устраивает.",
     "category": "general",
     "reverse_scored": true
   },
   {
     "id": 21,
-    "text": "At times I have very much wanted to leave home.",
+    "text": "Иногда мне очень хотелось уйти из дома.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 22,
-    "text": "At times I have fits of laughing and crying that I cannot control.",
+    "text": "Иногда у меня бывают приступы смеха или плача, которые я не могу контролировать.",
     "category": "hysteria",
     "reverse_scored": false
   },
   {
     "id": 23,
-    "text": "I am troubled by attacks of nausea and vomiting.",
+    "text": "Меня мучают приступы тошноты и рвоты.",
     "category": "hypochondriasis",
     "reverse_scored": false
   },
   {
     "id": 24,
-    "text": "No one seems to understand me.",
+    "text": "Кажется, меня никто не понимает.",
     "category": "paranoia",
     "reverse_scored": false
   },
   {
     "id": 25,
-    "text": "I would like to be a singer.",
+    "text": "Я хотел бы стать певцом.",
     "category": "general",
     "reverse_scored": false
   },
   {
     "id": 26,
-    "text": "I feel that it is certainly best to keep my mouth shut when I’m in trouble.",
+    "text": "Я считаю, что в трудных ситуациях лучше промолчать.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 27,
-    "text": "Evil spirits possess me at times.",
+    "text": "Иногда мной овладевают злые духи.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 28,
-    "text": "When someone does me a wrong, I feel I should pay him back if I can, just for the principle of the thing.",
+    "text": "Когда кто-то поступает со мной несправедливо, я считаю, что должен отплатить ему, если есть возможность, просто из принципа.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 29,
-    "text": "I am bothered by acid stomach several times a week.",
+    "text": "Меня беспокоит изжога несколько раз в неделю.",
     "category": "hypochondriasis",
     "reverse_scored": false
   },
   {
     "id": 30,
-    "text": "At times I feel like swearing.",
+    "text": "Иногда мне хочется выругаться.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 31,
-    "text": "I have nightmares every few nights.",
+    "text": "У меня бывают кошмары каждые несколько ночей.",
     "category": "psychasthenia",
     "reverse_scored": false
   },
   {
     "id": 32,
-    "text": "I find it hard to keep my mind on a task or job.",
+    "text": "Мне трудно сосредоточиться на задаче или работе.",
     "category": "psychasthenia",
     "reverse_scored": false
   },
   {
     "id": 33,
-    "text": "I have had very peculiar and strange experiences.",
+    "text": "У меня были очень странные и необычные переживания.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 34,
-    "text": "I have a cough most of the time.",
+    "text": "Большую часть времени я кашляю.",
     "category": "hypochondriasis",
     "reverse_scored": false
   },
   {
     "id": 35,
-    "text": "If people had not had it in for me, I would have been much more successful.",
+    "text": "Если бы люди не были настроены против меня, я бы добился гораздо большего успеха.",
     "category": "paranoia",
     "reverse_scored": false
   },
   {
     "id": 36,
-    "text": "I seldom worry about my health.",
+    "text": "Я редко беспокоюсь о своём здоровье.",
     "category": "hypochondriasis",
     "reverse_scored": true
   },
   {
     "id": 37,
-    "text": "I have never been in trouble because of my sex behavior.",
+    "text": "У меня никогда не было проблем из-за моего сексуального поведения.",
     "category": "psychopathic_deviate",
     "reverse_scored": true
   },
   {
     "id": 38,
-    "text": "During one period when I was a youngster, I engaged in petty thievery.",
+    "text": "В детстве я иногда занимался мелкими кражами.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 39,
-    "text": "At times I feel like smashing things.",
+    "text": "Иногда мне хочется всё разбить.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 40,
-    "text": "Most any time I would rather sit and daydream than to do anything else.",
+    "text": "Почти в любое время я предпочитаю сидеть и мечтать, чем что-либо делать.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 41,
-    "text": "I have had periods of days, weeks, or months when I couldn’t take care of things because I couldn’t “get going.”",
+    "text": "У меня бывали периоды (дни, недели или месяцы), когда я не мог справляться с делами, потому что не мог «заставить себя действовать».",
     "category": "depression",
     "reverse_scored": false
   },
   {
     "id": 42,
-    "text": "My family does not like the work I have chosen (or the work I intend to choose for my life work).",
+    "text": "Моя семья не одобряет работу, которую я выбрал (или собираюсь выбрать как жизненное призвание).",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 43,
-    "text": "I sleep fitfully, disturbedly.",
+    "text": "Я сплю беспокойно, прерывисто.",
     "category": "psychasthenia",
     "reverse_scored": false
   },
   {
     "id": 44,
-    "text": "Much of the time my head seems to hurt all over.",
+    "text": "Большую часть времени у меня болит вся голова.",
     "category": "hypochondriasis",
     "reverse_scored": false
   },
   {
     "id": 45,
-    "text": "I do not always tell the truth.",
+    "text": "Я не всегда говорю правду.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 46,
-    "text": "My judgment is better than it ever was.",
+    "text": "Моё суждение сейчас лучше, чем когда-либо.",
     "category": "general",
     "reverse_scored": true
   },
   {
     "id": 47,
-    "text": "Once a week or oftener I feel suddenly hot all over without apparent cause.",
+    "text": "Раз в неделю или чаще я внезапно чувствую жар во всём теле без видимой причины.",
     "category": "hysteria",
     "reverse_scored": false
   },
   {
     "id": 48,
-    "text": "When I am with people, I am bothered by hearing very queer things.",
+    "text": "Когда я нахожусь среди людей, меня беспокоят очень странные звуки, которые я слышу.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 49,
-    "text": "It would be better if almost all laws were thrown away.",
+    "text": "Было бы лучше, если бы почти все законы отменили.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 50,
-    "text": "My soul sometimes leaves my body.",
+    "text": "Моя душа иногда покидает тело.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 51,
-    "text": "I am in just as good physical health as most of my friends.",
+    "text": "Я нахожусь в такой же хорошей физической форме, как и большинство моих друзей.",
     "category": "hypochondriasis",
     "reverse_scored": true
   },
   {
     "id": 52,
-    "text": "I prefer to pass by school friends, or people I know but have not seen for a long time, unless they speak to me first.",
+    "text": "Я предпочитаю проходить мимо школьных друзей или знакомых, которых давно не видел, если они сами не заговаривают со мной.",
     "category": "social_introversion",
     "reverse_scored": false
   },
   {
     "id": 53,
-    "text": "A minister can cure disease by praying and putting his hand on your head.",
+    "text": "Священник может вылечить болезнь молитвой и возложением рук.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 54,
-    "text": "I am liked by most people who know me.",
+    "text": "Меня любят большинство людей, которые меня знают.",
     "category": "social_introversion",
     "reverse_scored": true
   },
   {
     "id": 55,
-    "text": "I am almost never bothered by pains over the heart or in my chest.",
+    "text": "Меня почти никогда не беспокоят боли в области сердца или груди.",
     "category": "hypochondriasis",
     "reverse_scored": true
   },
   {
     "id": 56,
-    "text": "As a youngster, I was suspended from school one or more times for cutting up.",
+    "text": "В детстве меня отстраняли от занятий в школе один или несколько раз за хулиганство.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 57,
-    "text": "I am a good mixer.",
+    "text": "Я легко нахожу общий язык с людьми.",
     "category": "social_introversion",
     "reverse_scored": true
   },
   {
     "id": 58,
-    "text": "Everything is turning out just like the prophets of the Bible said it would.",
+    "text": "Всё происходит именно так, как предсказывали пророки в Библии.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 59,
-    "text": "I have often had to take orders from someone who did not know as much as I did.",
+    "text": "Мне часто приходилось выполнять приказы кого-то, кто знал меньше меня.",
     "category": "paranoia",
     "reverse_scored": false
   },
   {
     "id": 60,
-    "text": "I do not read every editorial in the newspaper every day.",
+    "text": "Я не читаю каждую газетную редакционную статью ежедневно.",
     "category": "general",
     "reverse_scored": true
   },
   {
     "id": 61,
-    "text": "I have not lived the right kind of life.",
+    "text": "Я жил не так, как следовало бы.",
     "category": "depression",
     "reverse_scored": false
   },
   {
     "id": 62,
-    "text": "Parts of my body often have feelings like burning, tingling, crawling, or like “going to sleep.”",
+    "text": "Части моего тела часто испытывают ощущения жжения, покалывания, мурашек или онемения.",
     "category": "hysteria",
     "reverse_scored": false
   },
   {
     "id": 63,
-    "text": "I have had no difficulty in starting or holding my urine.",
+    "text": "У меня не было проблем с мочеиспусканием.",
     "category": "hypochondriasis",
     "reverse_scored": true
   },
   {
     "id": 64,
-    "text": "I commonly hear voices without knowing where they come from.",
+    "text": "Я часто слышу голоса, не зная, откуда они исходят.",
     "category": "schizophrenia",
     "reverse_scored": false
   },
   {
     "id": 65,
-    "text": "I sometimes keep on at a thing until others lose their patience with me.",
+    "text": "Иногда я продолжаю заниматься чем-то, пока окружающие не теряют терпение.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 66,
-    "text": "I would enjoy the car of a race driver.",
+    "text": "Мне бы понравилось быть автогонщиком.",
     "category": "general",
     "reverse_scored": false
   },
   {
     "id": 67,
-    "text": "I sometimes feel that I am about to go to pieces.",
+    "text": "Иногда я чувствую, что вот-вот развалюсь на части.",
     "category": "psychasthenia",
     "reverse_scored": false
   },
   {
     "id": 68,
-    "text": "I like to gossip at times.",
+    "text": "Иногда мне нравится посплетничать.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   },
   {
     "id": 69,
-    "text": "I have certainly had more than my share of things to worry about.",
+    "text": "У меня определённо было больше поводов для беспокойства, чем у других.",
     "category": "depression",
     "reverse_scored": false
   },
   {
     "id": 70,
-    "text": "I hardly ever feel pain in the back of the neck.",
+    "text": "Я почти никогда не чувствую боли в затылке.",
     "category": "hypochondriasis",
     "reverse_scored": true
   },
   {
     "id": 71,
-    "text": "I am very strongly attracted by members of my own sex.",
+    "text": "Меня очень сильно привлекают представители моего пола.",
     "category": "psychopathic_deviate",
     "reverse_scored": false
   }

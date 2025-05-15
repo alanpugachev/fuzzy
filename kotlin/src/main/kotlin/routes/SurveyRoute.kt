@@ -32,18 +32,18 @@ fun Route.surveyRoute() {
                     div(classes = "content-wrapper") {
                         div(classes = "navbar") {
                             a(href = "/") {
-                                button(classes = "nav-button") { +"Home" }
+                                button(classes = "nav-button") { +"Главная" }
                             }
                             a(href = "/about") {
-                                button(classes = "nav-button") { +"About" }
+                                button(classes = "nav-button") { +"О проекте" }
                             }
                         }
 
                         main(classes = "content-box") {
-                            h1 { +"Psychological Assessment" }
+                            h1 { +"Психологическая оценка" }
 
                             div(classes = "disclaimer-box") {
-                                +"Please answer honestly based on your feelings. There are no right or wrong answers."
+                                +"Пожалуйста, отвечайте честно, основываясь на своих чувствах. Нет правильных или неправильных ответов."
                             }
 
                             form(classes = "survey-form", action = "/submit-survey", method = FormMethod.post) {
@@ -52,11 +52,11 @@ fun Route.surveyRoute() {
                                         h3 { +question.text }
 
                                         div(classes = "rating-scale") {
-                                            span { +"Never" }
-                                            span { +"Rarely" }
-                                            span { +"Sometimes" }
-                                            span { +"Often" }
-                                            span { +"Always" }
+                                            span { +"Никогда" }
+                                            span { +"Редко" }
+                                            span { +"Иногда" }
+                                            span { +"Часто" }
+                                            span { +"Постоянно" }
                                         }
 
                                         div(classes = "radio-group") {
@@ -77,7 +77,7 @@ fun Route.surveyRoute() {
                                 }
 
                                 button(type = ButtonType.submit, classes = "submit-button") {
-                                    +"Submit"
+                                    +"Подтвердить"
                                 }
                             }
                         }
@@ -130,7 +130,7 @@ fun Route.surveyRoute() {
                         
                         if (seconds <= 0) {
                             clearInterval(interval);
-                            window.location.href = '/results'; // Перенаправление после завершения
+                            window.location.href = '/results';
                         }
                     }, 1000);
                 </script>
