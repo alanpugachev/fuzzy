@@ -10,6 +10,9 @@ import kotlinx.html.body
 import kotlinx.html.button
 import kotlinx.html.div
 import kotlinx.html.h1
+import kotlinx.html.h3
+import kotlinx.html.h4
+import kotlinx.html.h6
 import kotlinx.html.head
 import kotlinx.html.link
 import kotlinx.html.main
@@ -55,44 +58,56 @@ fun Route.resultsRoute() {
 
                     main(classes = "content-box") {
                         h1 { +"Результаты" }
-                        table {
-                            tr {
-                                th { +"Шкала" }
-                                th { +"Низкий" }
-                                th { +"Средний" }
-                                th { +"Повышенный" }
-                                th { +"Высокий" }
-                                th { +"Очень высокий" }
-                            }
 
-                            surveyResultsRepo
-                                .getAllRaw()
-                                .getOrThrow()
-                                .last()
-                                .let { result ->
-                                    listOf(
-                                        "Истерия" to result.hysteria,
-                                        "Ипохондрия" to result.hypochondria,
-                                        "Депрессия" to result.depression,
-                                        "Психопатия" to result.psychopathy,
-                                        "Паранойа" to result.paranoia,
-                                        "Психостения" to result.psychasthenia,
-                                        "Шизофрения" to result.schizophrenia,
-                                        "Гипомания" to result.hypomania,
-                                        "Интроверсия" to result.introversion
-                                    ).forEach { (scaleName, levels) ->
-                                        tr {
-                                            td {
-                                                span("scale-name") { +scaleName }
+                        div(classes = "box-holder") {
+                            h3 { +"Подозрение на девиантное поведение в будущем: 38.5%" }
+                            h4 { +"Основные проявления: истеричное поведение, излишнее беспокойство о состоянии здоровья, безразличие к окружающему миру, параноидальные мысли" }
+                        }
+
+                        div(classes = "box-holder") {
+                            table {
+                                tr {
+                                    th { +"Шкала" }
+                                    th { +"Низкий" }
+                                    th { +"Средний" }
+                                    th { +"Повышенный" }
+                                    th { +"Высокий" }
+                                    th { +"Очень высокий" }
+                                }
+
+                                surveyResultsRepo
+                                    .getAllRaw()
+                                    .getOrThrow()
+                                    .last()
+                                    .let { result ->
+                                        listOf(
+                                            "Истерия" to result.hysteria,
+                                            "Ипохондрия" to result.hypochondria,
+                                            "Депрессия" to result.depression,
+                                            "Психопатия" to result.psychopathy,
+                                            "Паранойа" to result.paranoia,
+                                            "Психостения" to result.psychasthenia,
+                                            "Шизофрения" to result.schizophrenia,
+                                            "Гипомания" to result.hypomania,
+                                            "Интроверсия" to result.introversion
+                                        ).forEach { (scaleName, levels) ->
+                                            tr {
+                                                td {
+                                                    span("scale-name") { +scaleName }
+                                                }
+                                                td { +"${"%.4f".format(levels.low)}" }
+                                                td { +"${"%.4f".format(levels.elevated)}" }
+                                                td { +"${"%.4f".format(levels.mid)}" }
+                                                td { +"${"%.4f".format(levels.high)}" }
+                                                td { +"${"%.4f".format(levels.very_high)}" }
                                             }
-                                            td { +"${"%.4f".format(levels.low)}" }
-                                            td { +"${"%.4f".format(levels.elevated)}" }
-                                            td { +"${"%.4f".format(levels.mid)}" }
-                                            td { +"${"%.4f".format(levels.high)}" }
-                                            td { +"${"%.4f".format(levels.very_high)}" }
                                         }
                                     }
-                                }
+                            }
+                        }
+
+                        div(classes = "box-holder") {
+                            h4 { +"При высоких показателях обратитесь к специалисту." }
                         }
                     }
                 }

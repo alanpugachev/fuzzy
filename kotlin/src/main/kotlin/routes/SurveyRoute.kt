@@ -49,7 +49,7 @@ fun Route.surveyRoute() {
                             form(classes = "survey-form", action = "/submit-survey", method = FormMethod.post) {
                                 questions.forEach { question ->
                                     div(classes = "survey-question") {
-                                        h3 { +question.text }
+                                        h2 { +question.text }
 
                                         div(classes = "rating-scale") {
                                             span { +"Никогда" }

@@ -13,7 +13,7 @@ class Question(
 ) {
     companion object {
         val questions = Json.decodeFromString<List<Question>>(
-            File("kotlin/src/main/resources/questions.json").readText()
+            File("src/main/resources/questions.json").readText()
         )
     }
 }
